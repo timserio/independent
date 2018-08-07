@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".scale.ScaleActivity">
+
+    <com.jaredrummler.materialspinner.MaterialSpinner
+        android:id="@+id/spinner_scale_note"
+        android:layout_width="112dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:ms_background_color="@color/colorAccent"
+        app:ms_dropdown_max_height="120dp"
+        app:ms_text_color="@color/colorPrimaryDark" />
+
+    <com.jaredrummler.materialspinner.MaterialSpinner
+        android:id="@+id/spinner_scale_type"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/spinner_scale_note"
+        app:layout_constraintTop_toTopOf="parent"
+        app:ms_background_color="@color/colorAccent"
+        app:ms_dropdown_max_height="120dp"
+        app:ms_text_color="@color/colorPrimaryDark" />
+
+    <com.kekstudio.pianochartview.PianoChartView
+        android:id="@+id/piano_scale"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        app:checkedKeysColor="@color/colorAccent"
+        app:darkKeysColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lightKeysColor="@android:color/white"
+        app:size="Large" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".edittimer.EditTimerActivity"
+    tools:showIn="@layout/activity_edit_timer"
+    android:padding="16dp"
+    >
+
+    <View
+        android:id="@+id/view_edit_divider_two"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/picker_edit_degrees_tens" />
+
+    <TextView
+        android:id="@+id/text_edit_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="@string/label_tea_name"
+        android:textColor="@color/card"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_edit_teaname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_edit_label"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/card"
+        />
+
+    <View
+        android:id="@+id/view_edit_divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_edit_teaname"
+        android:background="@color/card"
+        />
+
+    <TextView
+        android:id="@+id/text_edit_timer_label"
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/label_timer_length"
+        android:textColor="@color/card"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@+id/text_edit_teaname"
+        app:layout_constraintTop_toBottomOf="@+id/view_edit_divider_two" />
+
+    <biz.kasual.materialnumberpicker.MaterialNumberPicker
+        android:id="@+id/picker_edit_minutes"
+        android:layout_width="wrap_content"
+        android:layout_height="125dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/text_edit_timer_colon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_edit_timer_label"
+        app:npBackgroundColor="@color/colorAccent"
+        app:npDefaultValue="1"
+        app:npMaxValue="20"
+        app:npMinValue="0"
+        app:npSeparatorColor="@color/colorPrimaryDark"
+        app:npTextColor="@color/colorPrimaryDark"
+        app:npTextSize="25sp" />
+
+    <TextView
+        android:id="@+id/text_edit_timer_colon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="48dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/label_timer_colon"
+        android:textColor="@color/card"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/picker_edit_minutes"
+        app:layout_constraintEnd_toStartOf="@+id/picker_edit_seconds_tens"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/picker_edit_minutes" />
+
+    <biz.kasual.materialnumberpicker.MaterialNumberPicker
+        android:id="@+id/picker_edit_seconds_tens"
+        android:layout_width="wrap_content"
+        android:layout_height="125dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/text_edit_timer_colon"
+        app:layout_constraintTop_toTopOf="@+id/picker_edit_minutes"
+        app:npDefaultValue="0"
+        app:npMinValue="0"
+        app:npMaxValue="5"
+        app:npTextSize="25sp"
+        app:npBackgroundColor="@color/colorAccent"
+        app:npSeparatorColor="@color/colorPrimaryDark"
+        app:npTextColor="@color/colorPrimaryDark"
+        />
+
+    <biz.kasual.materialnumberpicker.MaterialNumberPicker
+        android:id="@+id/picker_edit_seconds_ones"
+        android:layout_width="wrap_content"
+        android:layout_height="125dp"
+        app:layout_constraintStart_toEndOf="@+id/picker_edit_seconds_tens"
+        app:layout_constraintTop_toTopOf="@+id/picker_edit_seconds_tens"
+        app:npBackgroundColor="@color/colorAccent"
+        app:npDefaultValue="0"
+        app:npMaxValue="9"
+        app:npMinValue="0"
+        app:npSeparatorColor="@color/colorPrimaryDark"
+        app:npTextColor="@color/colorPrimaryDark"
+        app:npTextSize="25sp"
+        />
+
+    <View
+        android:id="@+id/view_edit_divider_one"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/picker_edit_seconds_tens" />
+
+    <TextView
+        android:id="@+id/text_edit_temp_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/label_water_temperature"
+        android:textColor="@color/card"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_edit_divider" />
+
+    <biz.kasual.materialnumberpicker.MaterialNumberPicker
+        android:id="@+id/picker_edit_degrees_hundreds"
+        android:layout_width="wrap_content"
+        android:layout_height="125dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_edit_temp_label"
+        app:npBackgroundColor="@color/colorAccent"
+        app:npDefaultValue="1"
+        app:npMaxValue="2"
+        app:npMinValue="0"
+        app:npSeparatorColor="@color/colorPrimaryDark"
+        app:npTextColor="@color/colorPrimaryDark"
+        app:npTextSize="25sp" />
+
+    <biz.kasual.materialnumberpicker.MaterialNumberPicker
+        android:id="@+id/picker_edit_degrees_tens"
+        android:layout_width="wrap_content"
+        android:layout_height="125dp"
+        app:layout_constraintStart_toEndOf="@+id/picker_edit_degrees_hundreds"
+        app:layout_constraintTop_toTopOf="@+id/picker_edit_degrees_hundreds"
+        app:npBackgroundColor="@color/colorAccent"
+        app:npDefaultValue="7"
+        app:npMaxValue="9"
+        app:npMinValue="0"
+        app:npSeparatorColor="@color/colorPrimaryDark"
+        app:npTextColor="@color/colorPrimaryDark"
+        app:npTextSize="25sp" />
+
+    <biz.kasual.materialnumberpicker.MaterialNumberPicker
+        android:id="@+id/picker_edit_degrees_ones"
+        android:layout_width="wrap_content"
+        android:layout_height="125dp"
+        app:layout_constraintStart_toEndOf="@+id/picker_edit_degrees_tens"
+        app:layout_constraintTop_toTopOf="@+id/picker_edit_degrees_tens"
+        app:npBackgroundColor="@color/colorAccent"
+        app:npDefaultValue="0"
+        app:npMaxValue="9"
+        app:npMinValue="0"
+        app:npSeparatorColor="@color/colorPrimaryDark"
+        app:npTextColor="@color/colorPrimaryDark"
+        app:npTextSize="25sp" />
+
+    <TextView
+        android:id="@+id/text_edit_farenheit_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="45dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/label_farenheit"
+        android:textColor="@color/card"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/picker_edit_degrees_ones"
+        app:layout_constraintStart_toEndOf="@+id/picker_edit_degrees_ones" />
+
+    <TextView
+        android:id="@+id/text_delete_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/error"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_edit_divider_one" />
+
+</android.support.constraint.ConstraintLayout>

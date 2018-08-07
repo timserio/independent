@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">RecipePicker</string>
+
+    <string name="text_intro">Fill out the form below to get a list of recipes.</string>
+    <string name="text_health">Health Restrictions:</string>
+    <string name="text_diet">Diet:</string>
+    <string name="button_cant_decide">Can\'t Decide?</string>
+    <string name="button_get_recipes">Get Recipes</string>
+    <string name="edittext_max_time">Maximum cook time (Minutes)</string>
+    <string name="edittext_min_time">Minimum cook time (Minutes)</string>
+    <string name="edittext_ingredients">Number of ingredients</string>
+    <string name="edittext_exclude">Foods to exclude</string>
+    <string name="edittext_food">Kind of food (Required)</string>
+    <string name="text_select_recipe">Select A Recipe:</string>
+    <string name="text_no_results">There are no results for that search.</string>
+    <string name="button_back">Back</string>
+    <string name="appbar_title">RecipePicker</string>
+</resources>

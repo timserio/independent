@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PianoHelper</string>
+    <string name="text_scale_appbar">Choose a Scale</string>
+    <string name="text_chord_appbar">Choose a Chord</string>
+    <string name="button_home_chords">Chords</string>
+    <string name="button_home_scales">Scales</string>
+</resources>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Solunar</string>
+    <string name="text_first_major_label">Major 1:</string>
+    <string name="text_first_minor_label">Minor 1:</string>
+    <string name="text_second_major_label">Major 2:</string>
+    <string name="text_second_minor_label">Minor 2:</string>
+    <string name="button_get_solunar_times">Get Solunar Times</string>
+    <string name="text_error_location">Please turn your location on.</string>
+    <string name="text_error_location_wifi">Please turn your location and wifi on.</string>
+    <string name="text_error_wifi">Please turn your wifi on.</string>
+</resources>

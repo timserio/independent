@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">TeaTimer</string>
+    <string name="action_settings">Settings</string>
+    <string name="label_timer_inital_text">3:00</string>
+    <string name="label_temp_initial_text">205°F</string>
+    <string name="label_tea_name">Tea Name</string>
+    <string name="label_enter_tea">Enter the name of your tea</string>
+    <string name="label_timer_length">Timer Length: </string>
+    <string name="label_water_temperature">Water Temperature: </string>
+    <string name="label_farenheit">°F</string>
+    <string name="label_timer_colon">:</string>
+    <string name="label_empty"></string>
+    <string name="title_activity_add_timer">AddTimerActivity</string>
+    <string name="title_activity_edit_timer">EditTimerActivity</string>
+    <string name="toolbar_add_timer">Add A Timer</string>
+    <string name="toolbar_edit_timer">Edit Timer</string>
+
+    <string name="error_delete">You can\'t delete your only timer</string>
+    <string name="error_add_timer_empty_teaname">Tea Name must contain letters or numbers</string>
+    <string name="error_empty_timer_length">You can\'t have a timer length of 0.</string>
+    <string name="error_empty_water_temp">You can\'t have a water temperature of 0.</string>
+    <string name="error_timer_exists">This timer already exists. Choose a different tea name.</string>
+</resources>

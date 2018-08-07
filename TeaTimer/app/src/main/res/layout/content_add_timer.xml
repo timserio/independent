@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".addtimer.AddTimerActivity"
+    tools:showIn="@layout/activity_add_timer"
+    android:padding="16dp"
+    >
+
+    <View
+        android:id="@+id/view_edit_divider_one"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/picker_add_seconds_tens" />
+
+    <View
+        android:id="@+id/view_edit_divider_two"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/picker_add_degrees_tens" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edittext_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:hint="@string/label_enter_tea"
+        android:backgroundTint="@color/card"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
+        app:met_baseColor="@color/card"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelText="Tea Name"
+        app:met_maxCharacters="29"
+        app:met_minCharacters="1"
+        app:met_primaryColor="@color/card"
+        app:met_textColor="@color/card"
+        app:met_underlineColor="@color/colorAccent"
+        />
+
+    <biz.kasual.materialnumberpicker.MaterialNumberPicker
+        android:id="@+id/picker_add_minutes"
+        android:layout_width="wrap_content"
+        android:layout_height="125dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/text_add_timer_colon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_add_timer_length_label"
+        app:npBackgroundColor="@color/colorAccent"
+        app:npDefaultValue="1"
+        app:npMaxValue="20"
+        app:npMinValue="0"
+        app:npSeparatorColor="@color/colorPrimaryDark"
+        app:npTextColor="@color/colorPrimaryDark"
+        app:npTextSize="25sp" />
+
+    <TextView
+        android:id="@+id/text_add_timer_colon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="48dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/label_timer_colon"
+        android:textColor="@color/card"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/picker_add_minutes"
+        app:layout_constraintEnd_toStartOf="@+id/picker_add_seconds_tens"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/picker_add_minutes" />
+
+    <biz.kasual.materialnumberpicker.MaterialNumberPicker
+        android:id="@+id/picker_add_seconds_tens"
+        android:layout_width="wrap_content"
+        android:layout_height="125dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/text_add_timer_colon"
+        app:layout_constraintTop_toTopOf="@+id/picker_add_minutes"
+        app:npBackgroundColor="@color/colorAccent"
+        app:npDefaultValue="0"
+        app:npMaxValue="5"
+        app:npMinValue="0"
+        app:npSeparatorColor="@color/colorPrimaryDark"
+        app:npTextColor="@color/colorPrimaryDark"
+        app:npTextSize="25sp"
+        />
+
+    <biz.kasual.materialnumberpicker.MaterialNumberPicker
+        android:id="@+id/picker_add_seconds_ones"
+        android:layout_width="wrap_content"
+        android:layout_height="125dp"
+        app:layout_constraintStart_toEndOf="@+id/picker_add_seconds_tens"
+        app:layout_constraintTop_toTopOf="@+id/picker_add_seconds_tens"
+        app:npBackgroundColor="@color/colorAccent"
+        app:npDefaultValue="0"
+        app:npMaxValue="9"
+        app:npMinValue="0"
+        app:npSeparatorColor="@color/colorPrimaryDark"
+        app:npTextColor="@color/colorPrimaryDark"
+        app:npTextSize="25sp"
+        />
+
+    <TextView
+        android:id="@+id/text_add_temp_label"
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/label_water_temperature"
+        android:textColor="@color/card"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edittext_add" />
+
+    <biz.kasual.materialnumberpicker.MaterialNumberPicker
+        android:id="@+id/picker_add_degrees_hundreds"
+        android:layout_width="wrap_content"
+        android:layout_height="125dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_add_temp_label"
+        app:npBackgroundColor="@color/colorAccent"
+        app:npDefaultValue="1"
+        app:npMaxValue="2"
+        app:npMinValue="0"
+        app:npSeparatorColor="@color/colorPrimaryDark"
+        app:npTextColor="@color/colorPrimaryDark"
+        app:npTextSize="25sp" />
+
+    <biz.kasual.materialnumberpicker.MaterialNumberPicker
+        android:id="@+id/picker_add_degrees_tens"
+        android:layout_width="wrap_content"
+        android:layout_height="125dp"
+        app:layout_constraintStart_toEndOf="@+id/picker_add_degrees_hundreds"
+        app:layout_constraintTop_toTopOf="@+id/picker_add_degrees_hundreds"
+        app:npBackgroundColor="@color/colorAccent"
+        app:npDefaultValue="7"
+        app:npMaxValue="9"
+        app:npMinValue="0"
+        app:npSeparatorColor="@color/colorPrimaryDark"
+        app:npTextColor="@color/colorPrimaryDark"
+        app:npTextSize="25sp"
+        />
+
+    <biz.kasual.materialnumberpicker.MaterialNumberPicker
+        android:id="@+id/picker_add_degrees_ones"
+        android:layout_width="wrap_content"
+        android:layout_height="125dp"
+        app:layout_constraintStart_toEndOf="@+id/picker_add_degrees_tens"
+        app:layout_constraintTop_toTopOf="@+id/picker_add_degrees_tens"
+        app:npBackgroundColor="@color/colorAccent"
+        app:npDefaultValue="0"
+        app:npMaxValue="9"
+        app:npMinValue="0"
+        app:npSeparatorColor="@color/colorPrimaryDark"
+        app:npTextColor="@color/colorPrimaryDark"
+        app:npTextSize="25sp"
+        />
+
+    <TextView
+        android:id="@+id/text_add_farenheit_label"
+        android:layout_width="39dp"
+        android:layout_height="38dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="44dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/label_farenheit"
+        android:textColor="@color/card"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/picker_add_degrees_ones"
+        app:layout_constraintStart_toEndOf="@+id/picker_add_degrees_ones" />
+
+    <TextView
+        android:id="@+id/text_add_timer_length_label"
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/label_timer_length"
+        android:textColor="@color/card"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_edit_divider_two" />
+
+    <TextView
+        android:id="@+id/text_add_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:textColor="@color/error"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_edit_divider_one" />
+
+</android.support.constraint.ConstraintLayout>
